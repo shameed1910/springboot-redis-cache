@@ -1,0 +1,21 @@
+spring:
+  cache:
+    type: redis
+    redis:
+      time-to-live: 60000
+      cache-null-values: true
+
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test?useSSL=false
+    username: root
+    password: admin@123
+    hikari:
+      initialization-fail-timeout: 0
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      ddl-auto: create
